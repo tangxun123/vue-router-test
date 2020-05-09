@@ -1,17 +1,14 @@
 <template>
   <div class="main-component">
-    <div class="component-item">11homePage</div>
+    <div class="component-item">three</div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HomePage',
+  name: 'Three',
   data () {
     return {}
-  },
-  mounted () {
-    console.log(window.location)
   },
   methods: {
   }
@@ -22,6 +19,6 @@ export default {
 .component-item {
   width: 100px;
   height: 100px;
-  background-color: #eee;
+  background-color: #ddd;
 }
 </style>
