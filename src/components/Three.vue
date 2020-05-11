@@ -1,6 +1,8 @@
 <template>
   <div class="main-component">
-    <div class="component-item">three</div>
+    <div class="content-component">
+      <div class="component-item">three</div>
+    </div>
   </div>
 </template>
 
@@ -19,6 +21,5 @@ export default {
 .component-item {
   width: 100px;
   height: 100px;
-  background-color: #ddd;
 }
 </style>
