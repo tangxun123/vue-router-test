@@ -1,6 +1,8 @@
 <template>
   <div class="main-component">
-    <div class="component-item">11homePage</div>
+    <div class="content-component">
+      <div class="component-item">11homePage</div>
+    </div>
   </div>
 </template>
 
@@ -11,7 +13,7 @@ export default {
     return {}
   },
   mounted () {
-    console.log(window.location)
+    // console.log(window.location)
   },
   methods: {
   }
@@ -22,6 +24,5 @@ export default {
 .component-item {
   width: 100px;
   height: 100px;
-  background-color: #eee;
 }
 </style>
