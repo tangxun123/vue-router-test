@@ -1,7 +1,11 @@
 <template>
   <div class="main-component">
     <div class="content-component">
-      <div class="component-item">three</div>
+      <div class="component-item">
+        Three
+        <br>
+        <el-button @click="goChildren">goChildren</el-button>
+      </div>
     </div>
   </div>
 </template>
@@ -10,9 +14,18 @@
 export default {
   name: 'Three',
   data () {
-    return {}
+    return {
+      newArr: []
+    }
+  },
+  mounted () {
   },
   methods: {
+    goChildren(){
+      this.$router.push({
+        name: "Children"
+      })
+    }
   }
 }
 </script>

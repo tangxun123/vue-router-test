@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import HomePage from '@/components/HomePage'
 import RouterPush from '@/components/RouterPush'
 import Three from '@/components/Three'
+import Children from '@/components/Children'
+import P404 from '@/p404/p404'
 
 Vue.use(Router)
 
@@ -11,24 +13,48 @@ export default new Router({
   mode: "history",
   routes: [
     {
-      path: '/HomePage',
+      path: '/homePage',
       name: 'HomePage',
+      meta: {
+        title: "首页"
+      },
       component: HomePage
     },
     {
-      path: '/RouterPush/:id',
+      path: '/routerPush',
       name: 'RouterPush',
+      meta: {
+        title: "路由"
+      },
       component: RouterPush
     },
     {
-      path: '/Three',
+      path: '/three',
       name: 'Three',
-      component: Three
+      meta: {
+        title: "第三"
+      },
+      component: Three,
+      children:[
+        {
+          path: '/three/children',
+          name: 'Children',
+          meta: {
+            title: "子页面"
+          },
+          component: Children
+        }
+      ]
+    },
+    {
+      path: '/p404',
+      name: 'P404',
+      component: P404
     },
     {
       path: '/',
       name: 'HomePage',
-      redirect: "HomePage",
+      redirect: "homePage",
       component: HomePage
     },
   ]
