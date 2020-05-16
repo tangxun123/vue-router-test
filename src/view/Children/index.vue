@@ -8,9 +8,14 @@
 
 <script>
 export default {
-  name: "HomePage",
   data() {
     return {};
+  },
+  watch: {
+    "$route"(to,from,next){
+      console.log(to)
+      console.log(from)
+    }
   },
   methods: {
   }
