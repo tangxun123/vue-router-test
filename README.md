@@ -1,21 +1,25 @@
-# test
+# vue-router-test
 
-> A Vue.js project
+路由及模板项目
 
-## Build Setup
+### 目录结构说明
 
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
 ```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+src
+├── assets  // 用于存放静态资源
+│   ├── css
+│   ├── fonts
+│   ├── images
+│   └── js
+├── main.js   // 启动入口, 可以配置一些当前模块特定的配置内容
+├── router         // 导出的路由
+│   └── index.js
+├── store          // vuex 配置
+│   └── index.js
+├── styles         // 模块样式定义
+│   └── index.scss
+└── views  // 放置页面 views 目录下的页面必须包含 index 可以是 index.js , index.vue, 或者 index.jsx
+    └── example
+        └── index.js
+      
+```

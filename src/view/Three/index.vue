@@ -12,7 +12,6 @@
 
 <script>
 export default {
-  name: 'Three',
   data () {
     return {
       newArr: []
@@ -23,7 +22,7 @@ export default {
   methods: {
     goChildren(){
       this.$router.push({
-        name: "Children"
+        name: "children",
       })
     }
   }
@@ -32,7 +31,7 @@ export default {
 
 <style scoped>
 .component-item {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
 }
 </style>

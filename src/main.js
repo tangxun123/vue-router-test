@@ -1,11 +1,11 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-import Vue from 'vue'
-import App from './App'
-import router from './router'
-import Router from 'vue-router'
-import ElementUI, { Form } from 'element-ui'
-import 'element-ui/lib/theme-chalk/index.css'
+import Vue from 'vue';
+import App from './App';
+import router from './router';
+import Router from 'vue-router';
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
 import nprogress from "nprogress"; // 导入网页加载进度条
 import 'nprogress/nprogress.css';　// 导入网页加载进度条
 
@@ -35,10 +35,13 @@ router.beforeEach((to, from, next) => {
   arrForEach(router.options.routes); // 路由遍历
 
   // 路由404跳转
+  routerName = Array.from(new Set(routerName));
+  console.log(routerName);
+  console.log(to.name);
   if(routerName.includes(to.name)){
     // console.log(to.fullPath);
   }else{
-    next({path:"/P404"});
+    next({path:"/404"});
     return;
   }
 

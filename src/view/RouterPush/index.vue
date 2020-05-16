@@ -1,28 +1,31 @@
 <template>
   <div class="main-component">
     <div class="content-component">
-      <div class="component-item">11homePage</div>
+      <div class="component-item">222-router-push</div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HomePage',
   data () {
     return {}
   },
-  mounted () {
-    // console.log(window.location)
+  watch: {
+    "$route"(to,form,next){
+      // console.log(to);
+      // console.log(form);
+      // console.log(next);
+    }
   },
-  methods: {
+  mounted () {
   }
 }
 </script>
 
 <style scoped>
 .component-item {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
 }
 </style>

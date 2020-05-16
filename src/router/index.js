@@ -1,12 +1,12 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import HomePage from '@/components/HomePage'
-import RouterPush from '@/components/RouterPush'
-import Three from '@/components/Three'
-import Children from '@/components/Children'
-import P404 from '@/p404/p404'
+import Vue from 'vue';
+import Router from 'vue-router';
+import homePage from '@/view/HomePage';
+import routerPush from '@/view/RouterPush';
+import three from '@/view/Three';
+import children from '@/view/Children';
+import p404 from '@/view/P404';
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   // 搭建的环境默认用的hash mode，如果要去掉 #/，改成history模式就可以了
@@ -14,48 +14,63 @@ export default new Router({
   routes: [
     {
       path: '/homePage',
-      name: 'HomePage',
+      name: 'homePage',
       meta: {
         title: "首页"
       },
-      component: HomePage
+      component: homePage
     },
     {
       path: '/routerPush',
-      name: 'RouterPush',
+      name: 'routerPush',
       meta: {
         title: "路由"
       },
-      component: RouterPush
+      component: routerPush
     },
     {
       path: '/three',
-      name: 'Three',
+      name: 'three',
       meta: {
-        title: "第三"
+        title: "带子菜单的"
       },
-      component: Three,
+      redirect: "three/index",
+      component: three,
       children:[
         {
+          path: 'index',
+          name: 'three',
+          meta: {
+            title: "第三"
+          },
+          component: three
+        },
+        {
           path: '/three/children',
-          name: 'Children',
+          name: 'children',
           meta: {
             title: "子页面"
           },
-          component: Children
+          component: children
         }
       ]
     },
     {
-      path: '/p404',
-      name: 'P404',
-      component: P404
+      path: '/404',
+      name: 'p404',
+      meta: {
+        title: "找不到"
+      },
+      component: p404
     },
     {
       path: '/',
-      name: 'HomePage',
+      name: 'homePage',
+      meta: {
+        title: "首页"
+      },
       redirect: "homePage",
-      component: HomePage
+      component: homePage
     },
   ]
 })
