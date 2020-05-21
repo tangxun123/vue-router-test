@@ -44,16 +44,16 @@ export default new Router({
             title: "第三"
           },
           component: three
-        },
-        {
-          path: '/three/children',
-          name: 'children',
-          meta: {
-            title: "子页面"
-          },
-          component: children
         }
       ]
+    },
+    {
+      path: '/children',
+      name: 'children',
+      meta: {
+        title: "子页面"
+      },
+      component: children
     },
     {
       path: '/404',
